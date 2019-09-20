@@ -1,0 +1,215 @@
+
+
+<!--
+This is a short html code for displaying texts
+Written for: CST8238 - Lab 1 
+Written by: Jo Suh
+Referenced: https://brightspace.algonquincollege.com/d2l/le/content/192864/viewContent/3023042/View
+-->
+
+<!-- Document Type Definition : what type of document it is about to process-->
+<!-- Only state 'html', not the specific version -->
+<!DOCTYPE html>
+
+
+<!-- HTML5 doesn't require 'html', 'head', and 'body', but they are in XHTML.
+Most authors continue to use them -->
+<!-- html : The root element that contains all the other HTML elements in the document.
+divided into 2 sections: head and body.
+-->
+<html>
+
+<!-- head: contains descriptive elements about the document -->
+<head lang="en">
+	<!-- this declares that the character encoding for the document is 'UTF-8' -->
+	<meta charset="utf-8">
+
+	<!-- title: what displays as the 'tab name' -->
+	<title>Hello Welcome to the World of CST8238</title>
+
+	<!-- specifies and external CSS style sheet file that is used with this document -->
+	<link rel="stylesheet" href="css/main.css">
+	
+	<!-- references an external Javascript file -->
+	<script src="js/html5shiv.js"></script>
+</head>
+
+<!-- body: contins content that will be displayed by the browser -->
+<body>
+	<!-- The higher the heading's number(up to 6), the less importance
+	Don't choose headings because of its default appearence -->
+	<h1>Hello Welcome to the World of CST8238</h1>
+	
+    
+    <!-- p : Groups sentences and sections of text together
+    a paragrph always start and ends in a new line 
+    Block Display configures empty space above and below-->
+    <p>This is a paragraph. abcdefghijklmnopqrstuvwxyz now I know the ABC's next time sing along with me. Helllo World.
+    Now I started a new line on the code. Now I didn't.To skip a line in a paragraph, you need to use the 'br' tag. For example,<br>I have skipped a line here.
+    Now I am writing "" parentheses.This is a paragraph. This is a paragraph.
+    </p>
+    <!--<br> : a line break-->
+    
+    <p>The default for a paragraph</p>
+    <!-- <align="direction"> sets the alignment of the paragrph
+    This feature is apperently not allowed in html5-->
+    <p align="left"> Start from left side....default for paragraph</p>
+    <p align="right"> Start from right side</p>
+    <p align="center"> In the center of the page</p>
+    
+    
+   	<!-- blockquote : Indents a block of text for special emphasis -->
+   <blockquote>This is a blockquote text. This is a blockquote text. This is a blockquote text. Block Display configures empty space above and below. By default, blockquotes are indented.
+   </blockquote>
+   
+    
+    
+    
+    
+    <!-- phrase elements are used just like anny other: with a start and an end -->
+    
+
+    <!-- <b> Text that has no extra importance but is styled in bold font by usage and convention -->
+    <p><b>This is a bold text</b></p>
+    <!-- <em> Causes text to be emphasized in relation to other text; usually displayed in italics -->
+   <p><em> the em Emphasizes the text</em></p>
+    <!-- <i> Text that has no extra importance but is styled in italics by usage and convention -->
+    <p><i>italized text</i> of a paragraph</p>
+    <!-- <mark> Text that is highlighted in order to be easily referenced (HTML5 only) -->
+    <p><mark>Text that is highlighted, only in html5</mark></p>
+    <!-- <small> Legal disclaimers and notices (�fine print�) displayed in small font-size -->
+    <p><small>This is a small text</small>, whereas</p>
+    <!-- <strong> causes text to stand out from surrounding text; usually displayed in bold -->
+    <p><strong>This stands out from other text</strong></p>
+    <!-- <sub> Displays a subscript as small text below the baseline -->
+    <p><sub>This is a subtext</sub></p>
+   <!--  <sup> Displays a superscript as small text above the baseline -->
+    <p><sup>And this is a super text</sup></p>
+    
+    <p><br><b>This is a bold text <small>and it is small here</small> and it is <strong> strong</strong> here</b></p>
+    
+
+    <h2>Unordered list</h2>
+
+	<!-- unordered lists of no particular order (bulleted by default) -->
+	<ul>
+		<li>A</li>
+		<li>B</li>
+		<li>C</li>
+		<li>D</li>
+	</ul>
+	
+    <h2>Ordered list</h2>
+
+	<!-- ordered lists (with numbers) -->
+	<ol>
+		<li>E</li>
+		<li>F</li>
+		<li>G</li>
+		<!-- Can nest lists inside lists -->
+		<ul>
+		    <li>H</li>
+		    <li>I</li>
+	    	<li>J</li>
+	    	<li>K</li>
+		</ul>
+		<li>L</li>
+	</ol>
+	
+    <h2>Description list</h2>
+
+	<!-- description list of a term(dt) and a description(dd) 
+	dt adds an empty space below its definition
+	dd indents the text and adds an empty space above its definition-->
+	<dl>
+		<dt>M</dt>
+            <dd>Stands for Moo</dd>
+		<dt>N</dt>
+            <dd>Now is the time for a sing-along!</dd>
+		<dt>O</dt>
+            <dd>O Canada</dd>
+	</dl>
+	
+	<!-- special character usually start with the and(&) symbol and ends in a semicolon(;)-->
+	<p><br>The copy tag : &copy;
+	<br>Less than : &lt;
+	<br>Greater than : &gt;
+	<br>The 'And' symbo could be written like this: &amp;
+	<br>'nbsp' refers to space in a line that cannot bebroken by a word wrap like this:&nbsp;</p>
+	
+	
+	<!-- Specifies a hyperlink reference (href) to a file -->
+	<!-- <h2>Anchor Elements</h2> -->
+	<!-- href Attribute : indicates the file name or UR -->
+	<!-- <a href="index.html">address</a> -->
+	
+	<!-- Absolute link: Link to a different website -->
+	<a href="http://suh00010.com/CST8238/Lab1/index.html">Link to Lab1</a>
+	<br>
+
+	<!-- Relative link: Link to pages on your own site -->
+	<a href="http://suh00010.com/CST8238/Lab2/index.html">Home</a>
+	<br>
+	
+	<!-- Mail Hyperlink: Automatically launch the default mail program configured for the browser
+	If no browser default is configured, a message is displayed -->
+	<a  href="mailto:suh00010@algonquinlive.com">Email me</a>
+	<br>
+	
+	
+	<p>Datalist Control</p>
+	<label for="more">Extra letters:</label>
+	<input type="text" name="moreletters" id="moreletters" list="morealphabets" >
+	<datalist id="morealphabets">
+		<option value="M">
+		<option value="N">
+		<option value="O">
+		<option value="P">
+	</datalist>
+
+	
+	<!--Meter Element: Displays a visual gauge of a numeric value within a known range -->
+	<h2>Meter Element</h2>
+	<meter value="1500" min="0" max="1500"></meter> Max (1500)
+	<br>
+	<meter value="0" min="0" max="1500"></meter> Nothing
+	<br>
+	<meter value="20" min="0" max="1500"></meter> &nbsp;20 Internet
+	<br>
+	<meter value="1000" min="0" max="1500"></meter> &nbsp;1000 Ducks
+	<br>
+	<meter value="500" min="0" max="1500"></meter> &nbsp;500 Chickens
+	<br>
+	<meter value="100" min="0" max="1500"></meter> &nbsp;100 Pigs
+	<br>
+	<meter value="200" min="0" max="1500"></meter> &nbsp;200 Dogs
+	<br>
+	
+	
+	
+	<!-- Progress Element: Displays a bar that depicts a numeric value within a specified range
+	should be used to represent progress of a task only, not for just a gauge -->
+	<h2>Progress Element</h2>
+	<progress></progress>  Here without attributes, it's the loading bar
+	<br>
+    <progress value="8000" max="20000"></progress> Download progress...
+    <br>
+    
+   
+    <!-- Slider: 'type', 'name', 'id', 'min', 'max'.. -->
+    <h2>Slider Control</h2>
+    <label for="myChoice">Slider of 1-200</label>
+    <br>
+    1 <input type="range" name="userChoice" id="userChoice" min="1" max="200"> 200
+    <br>
+    
+     <!-- Calendar Control: 'for', 'type', 'name', 'id'...-->
+    <h2>Calendar Control</h2>
+    <label for="userDate">Choose your Date</label>
+    <input type="date" name="userDate" id="userDate">
+    <br>
+    
+</body>
+
+</html>
+
