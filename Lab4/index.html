@@ -1,0 +1,208 @@
+
+<!--
+    index.html
+    This is an HTML code for examples of multimedia use in a html website
+    Written on: 09/22/2019
+    Written by: Jo Suh
+-->
+
+
+
+<!DOCTYPE html>
+<!--
+Document Type Definition:
+    what type of document it is about to process
+    Only state 'html', not the specific version
+-->
+
+
+<html>
+<!--
+HTML5 doesn't require 'html', 'head', and 'body', but they are in XHTML
+html:
+    The root element that contains all the other HTML elements in the document; divided into 2 sections: head and body.
+-->
+
+<head lang="en">
+	<!-- head: contains descriptive elements about the document -->
+	<meta charset="utf-8">
+	<!-- this declares that the character encoding for the document is 'UTF-8' -->
+	
+	<title>Lab 4</title>
+	<!-- title: what displays as the 'tab name' -->
+	
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+	<link rel="stylesheet" href="css/main.css">
+    
+     <link  rel="stylesheet"  type="text/css" href="http://suh00010.com/CST8238/Lab4/StyleSheet.css">
+	<!-- specifies and external CSS style sheet file used with this document -->
+    
+    <!-- reference font -->
+    <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+ 
+    
+	<!-- specifies and external CSS style sheet file used with this document -->
+	
+	<script src="js/html5shiv.js"></script>
+	<!-- references an external Javascript file -->
+
+	
+</head>
+
+
+
+
+
+
+<body>
+<!-- body: contains content that will be displayed by the browser -->
+
+    <div id="header">
+    	<p >CST8238_351 Web Programming</p>
+    </div>
+    
+    
+    
+    <div id="menu">
+    	<ul>
+          <li><a href="http://suh00010.com/CST8238/Lab4/StyleSheet.css" title="Stylesheet.css">Stylesheet</a></li>
+          <li><a href="http://suh00010.com/CST8238/Lab4/Multimedia.html" title="Multimedia.html">Multimedia</a></li>
+          <li><a href="http://suh00010.com/CST8238/Lab4/index.html" class="active" title="index.html">Home</a></li>
+  		</ul>
+    </div>
+    
+    
+    
+    <div id="content">
+    	<p >hello yall</p>
+        <br>
+        <p>
+        Lorem ipsum dolor sit amet, ubique invenire an nec, ex tamquam propriae vix. Ea cum elit disputationi, an consul soluta repudiandae eos, illud iuvaret per ne. Dicant admodum ea est, an eam aperiam corpora nominavi, unum timeam vivendum eu mel. In nec saperet habemus deserunt, dolores hendrerit ne sea, labitur aliquando cum te.
+        
+Melius scripta <p class="emphasize">assentior<p> in ius, pro saepe habemus et. Ex facilisi definitionem duo. Qui ne sanctus laoreet voluptua, cu eius vidisse sed. Quem possit pro cu, quas solum pro ea. Eum mazim sonet errem ad, sed idque quidam conclusionemque et.
+
+Ad pri audire convenire interpretaris. Mea intellegebat voluptatibus reprehendunt ut. Per at probo solet deterruisset, has inermis facilis ei, mea ea amet everti. Id atomorum intellegam vel, nec no esse reformidans. Vis ipsum choro ne. Vis te melius scripta molestiae, eligendi efficiantur ea per.
+
+Pro ad homero invidunt intellegebat, legendos patrioque sea ad. Veri imperdiet vix ea, est probatus petentium at. Ex doctus facilisi suavitate vis, eam ne tollit persecuti. Id mandamus molestiae democritum cum.
+
+
+Vidit mediocrem cotidieque ne has. Nec an reque dicunt. Ea ludus fastidii deleniti per, nibh idque consequuntur at nam, nobis decore nostrud et cum. Per no urbanitas disputationi, at pro posse detraxit, hinc impedit efficiendi his id. Cum ea deleniti sensibus convenire, sed nemore delectus ad.
+        </p>
+        <br>
+        <br>
+        <p>
+Usu iudicabit intellegam ut. <p class="emphasize">Eam<p> cu iisque euismod, ferri delenit et eos. Harum scribentur necessitatibus vim in. Omnium denique ex eos, ut ornatus molestie placerat vim. Hinc disputando ut quo, has cu dicat meliore, per an eleifend mediocritatem. Ex tritani feugait vis, ei ius laboramus maiestatis constituto, no movet feugait mei.
+
+Eum ea menandri definiebas intellegebat, nam ne nostrum vituperatoribus, et has persius admodum eligendi. Cum ne nullam praesent, ad quaerendum contentiones vim. Brute choro sit ne, cum id quis audiam periculis, modus justo vivendo usu ut. Hinc congue legimus usu in. In ceteros expetenda cum, laudem explicari ex pro.
+
+Mel molestie copiosae assueverit ad. Aeque homero alterum his in. Ex insolens aliquando neglegentur vel, dicant diceret deseruisse his no. Sit at omnis primis, per esse dolorum at. Vel eu nostrum persecuti theophrastus. Et vix quem corrumpit, pri cu bonorum impedit.
+
+Vix ne feugait perpetua, ex erat magna vim. Vix alia atomorum instructior id, quot nominati ex mea. Eum vitae nullam diceret ex. Mea ei lorem abhorreant vituperatoribus, alia sonet scripta no nam. Cu dicunt consequuntur mel.
+
+Ei eos maiorum platonem. Est in odio apeirian. Mei liber possim postulant eu. Agam everti mel te. Eum et esse qualisque.
+</p>
+        <br>
+        <br>
+        
+
+        <br>
+        <br>
+        <p>Embedded audio file</p>
+        <br>
+        
+        <iframe title="Embedded audio"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/113011776&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+        </iframe>
+        
+
+        <br>
+	<audio controls>
+		<source src= "http://www.hochmuth.com/mp3/Tchaikovsky_Nocturne__orch.mp3"
+        		type="audio/mpeg"
+                title="Nocturne">
+      			Your browser does not support this audio
+	</audio>
+
+        
+        <br>
+        <p>Hyperlink to an audio file</p>
+        <div class="hyperlink">
+        	<a href="https://soundcloud.com/stormyosts2/howls-moving-castle-ost-flower">
+              		<p title="Hyperlink to https://soundcloud.com/stormyosts2/howls-moving-castle-ost-flower">
+              			Flower
+			</p>
+		</a>
+        	<a href="http://www.hochmuth.com/mp3/Tchaikovsky_Nocturne__orch.mp3">
+              		<p title="http://www.hochmuth.com/mp3/Tchaikovsky_Nocturne__orch.mp3">
+              			Nocturne.mp3
+			</p>
+		</a>
+        </div>
+        
+        <br>
+        <br>
+        
+        
+        <p>Embedded video file</p>
+        <br>
+        <!-- 
+        src= "
+        https://www.youtube.com/embed/
+        YoutubeFileName?
+        autoplay=booleanNum
+        &mute=booleanNum
+        &controls=0
+        &loop=1
+        "-->
+        <iframe title="Embedded video"
+			src="https://www.youtube.com/embed/ImPM5IDIYPs?
+            controls=0">
+		</iframe>
+        
+        <br>
+        
+        <video width="300px" height="160px" controls>
+		<source
+                src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                type="video/mp4">
+      			Your browser does not support this video
+		</video>
+        
+        <p>Hyperlink to an video file</p>
+        <div class="hyperlink">
+          <a href="https://www.youtube.com/watch?v=ImPM5IDIYPs">
+              	<p title="Hyperlink to https://www.youtube.com/watch?v=ImPM5IDIYPs">
+              		Name of Life
+              	</p>
+          </a>
+          <a href="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">
+            	<p title="Hyperlink to http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">
+                  	Bunny.mp4
+            	</p>
+          </a>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        
+        <p class="emphasize">This is an important text</p>
+        
+    </div>
+    
+    
+    <div id="footer">
+    	<p>	#040943462
+        	<br>
+        	&copy; Jo Suh. ALL RIGHTS RESERVED.
+        	<br>
+    		suh00010@algonquinlive.com
+        <p>
+    </div>
+
+
+
+</body>
+
+</html>
+

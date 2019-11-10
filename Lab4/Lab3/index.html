@@ -1,0 +1,337 @@
+﻿
+<!--
+	index.html
+    This is a html code for a table exmple
+    Written on: 09/18/2019
+	Written by: Jo Suh
+-->
+
+
+<!-- Document Type Definition : what type of document it is about to process-->
+<!-- Only state 'html', not the specific version -->
+<!DOCTYPE html>
+
+
+<!-- HTML5 doesn't require 'html', 'head', and 'body', but they are in XHTML-->
+<!-- html : The root element that contains all the other HTML elements in the document.
+divided into 2 sections: head and body.
+-->
+<html>
+
+
+<head lang="en">
+	<!-- head: contains descriptive elements about the document -->
+	<meta charset="utf-8">
+	<!-- this declares that the character encoding for the document is 'UTF-8' -->
+	
+	<title>Home</title>
+	<!-- title: what displays as the 'tab name' -->
+	
+	<link rel="stylesheet" href="css/main.css">
+	<!-- specifies and external CSS style sheet file that is used with this document -->
+	
+	<script src="js/html5shiv.js"></script>
+	<!-- references an external Javascript file -->
+
+        
+    <!-- 
+    	The following is the 'CSS' code;
+    	A 'template' of rules for the elements in the webpage
+    -->    
+	<style>
+    
+    /* Tables */
+	table { 
+        width: 50%; /* table's width is 50% of the webpage */
+        
+        
+        font-family: Helvetica; /* Used fonts */
+        
+        border-collapse: collapse;
+        /* border-collapse:
+            collapses the borders into a single border line
+            separate or collapse*/
+        
+        text-align: center;
+        /* align every element in the array */
+        
+        
+        /* This is to ensure that the table is placed at the center of the page */
+        margin-left:auto; 
+        margin-right:auto; 
+    }
+    
+    /* Table outer borders, heading lines, table elements */
+    table, th, td {
+    	/* This sets borders for entire parts of the table */
+        border: 1px solid black;
+    }
+    
+    
+    /* Table heading */
+    th {
+        height: 50px;
+        text-align: center;
+        
+        background-color: lightgrey;
+        color: black;
+    }
+    
+    
+    /* Table body, the elements */
+    tbody td {
+        padding: 0.7em;/* Set space between the text and the borders */
+	}
+    
+    /* p: text */
+    p{
+    	font-family: Times new roman;
+      	color:yellowgreen;
+      	display: inline; /* To remove the '\n' after the links we are going to put*/
+      	font-weight: bold;
+    }
+    /* mouse hovering over 'p' */
+    p:hover{
+    	color: limegreen; /* changes color when hovering over */
+  		text-decoration: underline;
+    }
+    /* a: links */
+    a{
+  		text-decoration: none;/* Remove underline */
+    }
+    /* visited link */
+    a:visited{
+    	color: lightgrey;
+    }
+    
+    </style>
+	
+	
+</head>
+
+
+
+
+
+
+
+<!-- body: contins content that will be displayed by the browser -->
+<body>
+    
+    
+    <br>
+    
+    
+    <h1 style="font-family:verdana;
+    		text-align:center;
+            color:#87CEEC">
+        Home
+    </h1>
+    
+    
+    
+    
+    <!-- links to other pages -->
+    
+	<!-- href Attribute : indicates the file name or UR -->
+	<!-- <a href="index.html">address</a> -->
+	
+    
+    <nav style="text-align: center">
+    	
+    	<a href="http://suh00010.com/CST8238/Lab3/Calendar.html">
+          <p>Calendar</p>
+      	</a>
+        
+        &nbsp; &nbsp; &nbsp;
+        
+        <a href="http://suh00010.com/CST8238/Lab3/Stock.html">
+          <p>Stock</p>
+      	</a>
+        
+        &nbsp; &nbsp; &nbsp;
+        
+    	<a href="http://suh00010.com/CST8238/Lab3/Schedule.html">
+          <p>Schedule</p>
+      	</a>
+        
+        
+    </nav>
+    
+    
+	<br>
+    <br>
+    <br>
+    <br>
+    
+    
+    
+    
+    <h2 style="font-family:verdana;
+        	text-align:left;
+        	color:lightgrey;
+            font-size: 0.9em;
+            text-align: center">
+        	&nbsp;Stage Performance List
+  	</h2>
+
+    <br>
+    
+    
+    
+   
+    
+    <!-- Create a HTML table element -->
+    <table>
+        <!-- The table head-->
+        <thead>
+            <!-- Row 1 -->
+            <tr>
+                <!-- th: heading -->
+                <th>Artist</th>
+                <th>Song Title</th>
+                <th>Genre</th>
+                <th>Require Lighting</th>
+                <th>Length</th>
+                <!-- colspan tag: makes the element span n number of columns-->
+                <th colspan=3>Instruments</th>
+                <th>Stage</th>
+            </tr>
+            
+        </thead>
+        
+        
+        
+        <!-- The table body -->
+        <tbody>
+            
+            <!-- Set each column's background colour -->
+            <col style="background-color: pink">
+            <col style="background-color: #fffa75">
+            <col style="background-color: #87ff75">
+            <col style="background-color: #75faff">
+            <col style="background-color: #75a8ff">
+            <!-- he following 3 columns  are the same type, so colour the same-->
+            <col style="background-color: #d175ff">
+            <col style="background-color: #d175ff">
+            <col style="background-color: #d175ff">
+            <col style="background-color: violet">
+            
+            
+            <tr>
+            <!-- Row 1 -->
+                <!-- td: elements -->
+                <td height="30">Agnes Obel</td>
+                <td>September Song</td>
+                <td>New-age</td>
+                <td>No</td>
+                <td>3:23</td>
+                <!-- Can also colspan in the elements -->
+                <td colspan=3>Piano</td>
+                <td>No</td>
+            </tr>
+            <tr>
+            <!-- Row 2 -->
+                <!-- rowspan tag: spans n number of rows.
+                Write then skip for the other rows-->
+                <td height="40" rowspan=6>Joe Hisaishi</td> 
+                <!-- Since set the height for the first element in the row,
+                all the rest are going to follow that height -->
+                <td>Ashitaka Sekki (tale of Ashitaka)</td>
+                <td rowspan=6>OST</td>
+                <td>Yes</td>
+                <td>5:21</td>
+                <td>Piano</td>
+                <td>Orchestra</td>
+                <td>Harp</td>
+                <td>Screening: Princess Mononokehime clip 1</td>
+            </tr>
+            <tr>
+            <!-- Row 3 -->
+                <!-- Since had a rowspan, it's as if
+                the following line has been written :
+                
+                <td>Joe Hisaishi</td>
+                    and
+                <td>OST</td>
+                
+                The first one to write here would be the 'Song title'
+                 -->
+                <td height="50">Symphony Variation "Merry-go-round"</td>
+                <td>No</td>
+                <td>7:13</td>
+                <td>Orchestra</td>
+                <td>Band</td>
+                <td>Band 2</td>
+                <td>Screening: Howl’s Moving Castle clip 1</td>
+            </tr>
+            <tr>
+            <!-- Row 4 -->
+                <td height="60">The Legend of Ashitaka Theme ( closing credits )</td>
+                <td>No</td>
+                <td>5:03</td>
+                <td>Orchestra</td>
+                <td colspan=2>Piano</td>
+                <td>Screening: Princess Mononokehime clip 2</td>
+            </tr>
+            <tr>
+            <!-- Row 5 -->
+                <td height="70">Porco Rosso: Madness (flight)</td>
+                <td>Yes</td>
+                <td>2:39</td>
+                <td>Orchestra</td>
+                <td colspan=2>Piano</td>
+                <td>Screening: Porco Rosso clip 1</td>
+            </tr>
+            <tr>
+            <!-- Row 6 -->
+                <td height="80">Kimi O Nosete (carrying you)</td>
+                <td>Yes</td>
+                <td>3:06</td>
+                <td>Orchestra</td>
+                <td colspan=2>Piano</td>
+                <td>Screening: Castle in the Sky clip 1</td>
+            </tr>
+            <tr>
+            <!-- Row 7 -->
+                <td height="90">Princess Mononoke – Ashitaka and San</td>
+                <td>No</td>
+                <td>3:12</td>
+                <td>Orchestra</td>
+                <td colspan=2>Piano</td>
+                <td>Screening: Princess Mononokehime clip 3</td>
+            </tr>
+            <tr>
+            <!-- Row 8 -->
+                <td height="100">Ryuichi Sakamoto</td>
+                <td>Merry Christmas, Mr. Lawrence</td>
+                <td>New-age</td>
+                <td>Yes</td>
+                <td>4:38</td>
+                <td colspan=3>Piano</td>
+                <td>Dancers</td>
+            </tr>
+            <tr>
+            <!-- Row 9 -->
+                <td height="110">Queen</td>
+                <td>Bohemian Rhapsody</td>
+                <td>Rock</td>
+                <td>Yes</td>
+                <td>5:55</td>
+                <td>Queen</td>
+                <td>Electrical Bass</td>
+                <td>Drum</td>
+                <td>Fireworks</td>
+            </tr>
+        </tbody>
+        
+    </table>
+    
+    <br>
+    <br>
+    <br>
+    
+</body>
+
+</html>
+

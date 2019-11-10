@@ -1,0 +1,447 @@
+﻿
+<!--
+	Schedule.html
+    This is a html code for a table example
+    Written on: 09/18/2019
+	Written by: Jo Suh
+-->
+
+
+<!-- Document Type Definition : what type of document it is about to process-->
+<!-- Only state 'html', not the specific version -->
+<!DOCTYPE html>
+
+
+<!-- HTML5 doesn't require 'html', 'head', and 'body', but they are in XHTML-->
+<!-- html : The root element that contains all the other HTML elements in the document.
+divided into 2 sections: head and body.
+-->
+<html>
+
+
+<head lang="en">
+	<!-- head: contains descriptive elements about the document -->
+	<meta charset="utf-8">
+	<!-- this declares that the character encoding for the document is 'UTF-8' -->
+	
+	<title>Schedule</title>
+	<!-- title: what displays as the 'tab name' -->
+	
+	<link rel="stylesheet" href="css/main.css">
+	<!-- specifies and external CSS style sheet file that is used with this document -->
+	
+	<script src="js/html5shiv.js"></script>
+	<!-- references an external Javascript file -->
+
+        
+    <!-- 
+    	The following is the 'CSS' code;
+    	A 'template' of rules for the elements in the webpage
+    -->    
+	<style>
+    
+    /* Tables */
+	table { 
+        width: 50%; /* table's width is 70% of the webpage */
+        
+        
+        font-family: Helvetica; /* Used fonts */
+        
+        border-collapse: collapse;
+        /* border-collapse:
+            collapses the borders into a single border line
+            separate or collapse*/
+        
+        text-align: center;
+        /* align every element in the array */
+        
+        
+        /* This is to ensure that the table is placed at the center of the page */
+        margin-left:auto; 
+        margin-right:auto; 
+    }
+    
+    /* Table outer borders, heading lines, table elements */
+    table, th, td {
+    	/* This sets borders for entire parts of the table */
+        border: 1px solid black;
+    }
+    
+    /* Table heading */
+    th {
+        height: 55px;
+        background-color: grey;
+        color: white;
+    }
+    
+    /* Table body, the elements */
+    tbody td {
+        height= 10px;
+        padding: 0.3em;/* Set space between the text and the borders */
+	}
+	/* Nth-child: strips */
+	tbody tr:nth-child(even)
+    {
+        background: #efefef; /* Set every even-number-th row to this color */
+    }
+    
+    
+    /* p: text */
+    p{
+    	font-family: Times new roman;
+      	color:yellowgreen;
+      	display: inline; /* To remove the '\n' after the links we are going to put*/
+    }
+    
+    /* mouse hovering over 'p' */
+    p:hover{
+    	color: limegreen; /* changes color when hovering over */
+  		text-decoration: underline;
+      	font-weight: bold;
+    }
+    
+    /* a: links */
+    a{
+  		text-decoration: none;/* Remove underline */
+    }
+    
+    /* visited link */
+    a:visited{
+    	color: lightgrey;
+    }
+    
+    </style>
+	
+	
+</head>
+
+
+
+
+
+
+
+<!-- body: contins content that will be displayed by the browser -->
+<body>
+    
+    
+    <br>
+    
+    
+    <h1 style="font-family:verdana;
+    		text-align:center;
+            color:#87CEEC">
+        Schedule
+    </h1>
+    
+    
+    
+    
+    <!-- links to other pages -->
+    
+	<!-- href Attribute : indicates the file name or UR -->
+	<!-- <a href="index.html">address</a> -->
+	
+    
+    <nav style="text-align: center">
+    	<a href="http://suh00010.com/CST8238/Lab3/index.html">
+          <p>Home</p>
+      	</a>
+        
+        &nbsp; &nbsp; &nbsp;
+        
+    	<a href="http://suh00010.com/CST8238/Lab3/Stock.html">
+          <p>Stocks</p>
+      	</a>
+        
+        &nbsp; &nbsp; &nbsp;
+        
+    	<a href="http://suh00010.com/CST8238/Lab3/Calendar.html">
+          <p>Calendar</p>
+      	</a>
+    </nav>
+    
+    
+	<br>
+    <br>
+    <br>
+    <br>
+    
+    
+    
+    <!-- Create a HTML table element -->
+    <table>
+        
+        <!-- The table head -->
+        <thead>
+            <tr style="background-color: grey;">
+                <th style="background-color: dark grey">Time</th>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+        </thead>
+        <!-- The table body -->
+        <tbody>
+            <!-- highlight the second and last row for the weekends-->
+            <col style="width:25px; background-color:#c7c7c7">
+            <col style= "width: 70px; background-color:lightgrey">
+            <col style= "width: 70px">
+            <col style= "width: 70px">
+            <col style= "width: 70px">
+            <col style= "width: 70px">
+            <col style= "width: 70px">
+            <col style= "width: 70px; background-color:lightgrey">
+            
+     
+            <tr>
+            <!-- Row 1-->
+                <td rowspan="2">8:00</td>
+                <td></td>
+                <td style="background-color:#cbdb81" rowspan="4">CST8216<br>300</td>
+                <td style="background-color:#cbdb81" rowspan="4">ENL2019T<br>301</td>
+                <td style="background-color:#cbdb81" rowspan="4">CST8130<br>310</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 2-->
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 3-->
+                <td rowspan="2">9:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 4-->
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 5-->
+                <td rowspan="2">10:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="background-color:#cbdb81" rowspan="4">CST8130<br>311</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 6-->
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 7-->
+                <td rowspan="2">11:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 8-->
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 9-->
+                <td rowspan="2">12:00</td>
+                <td></td>
+                <td style="background-color:#cbdb81" rowspan="2">CST8234<br>020</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 10-->
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 11-->
+                <td rowspan="2">13:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 12-->
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="background-color:#cbdb81" rowspan="4">CST8234<br>020</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 13-->
+                <td rowspan="2">14:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 14-->
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 15-->
+                <td rowspan="2">15:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 16-->
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 17-->
+                <td rowspan="2">16:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="background-color:#cbdb81" rowspan="4">CST8216<br>313</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 18-->
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 19-->
+                <td rowspan="2">17:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="background-color:#cbdb81" rowspan="4">CST8234<br>023</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 20-->
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 21-->
+                <td rowspan="2">18:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 22-->
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 23-->
+                <td rowspan="2">19:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            <!-- Row 24-->=
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            
+        </tbody>
+        
+        
+        
+        
+    </table>
+    
+    <br>
+    <br>
+    <br>
+    
+</body>
+
+</html>
+

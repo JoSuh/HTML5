@@ -1,0 +1,256 @@
+/*
+	Stylesheet.css
+	This is a Stylesheet reference for a sample website
+	Written by: Jo Suh
+	Created in: 09/25/19
+*/
+
+
+
+
+
+
+/* Type selector: Selects all elements with given name */
+
+	iframe {
+        width: 240px;
+        object-fit: contain;
+        frameborder: 0;
+        fullscreen: allow;
+
+    }
+
+
+/* Class selector: Selects all elements with given class attribute
+should be used when referencing several related elements */
+
+    /* Emphasize text */
+    .emphasize {
+        font-size: 1.1em;
+        font-style: italic;
+        font-weight: bold;
+        color: black;
+
+    }
+
+
+
+	/* Collage (table)*/
+    .collage { 
+        border-collapse: collapse;
+        text-align: center;
+        align: center;
+        margin: auto;
+	}
+    
+    .collage table, th, td {
+    	/* set borders for all parts of the table */
+        border: 5px solid white;
+    }
+    .collage {
+    	/* Add bottom border */
+    	border-bottom: double 10px #33cccc;
+    }
+        
+    /* Table heading */
+    .collage th {
+        height: 55px;
+        background-color: #33cccc;
+        
+        font-weight: bold;
+        font-family: Verdana;
+        color: white;
+    }
+    
+    /* Table body, the elements */
+    .collage img{
+        width: 150px;
+        height: 150px;
+        
+        padding: 3px;/* Set space between the text and the borders */
+        object-fit: cover; /* resize image to cover all of the space */
+	}
+
+
+
+
+	.hyperlink a{
+		/* set link name styles*/
+		color: darkcyan;
+		font-weight: normal;
+		text-decoration: none; /* Remove underline */
+	}
+  
+    .hyperlink p::before{
+    	/* insert an arrow before link*/
+      	content: ' \2192  ';
+    }
+
+    .hyperlink a:hover{
+    	/* hovering over links */
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+
+
+
+
+/* Universal selector: Selects all elements */
+
+
+	*{
+        /* set all margins and padding to zero */
+		border: 0;
+		padding: 0;
+		margin: 0;
+   	 }
+
+
+
+/* Attribute selector: Selects all elements with given attribute */
+	[title] {
+        cursor: help;
+        padding-bottom: 30px;
+        text-decoration: none;
+    }
+
+
+
+
+/* ID selector: Selects an element based on the value of its id attribute
+should be only one for an id in a document */
+
+
+    /* ID Header ------------------------ */
+    #header {
+        width: 100%;
+        position: static; 
+        overflow-x: hidden; /* hides contents of header if greater than width(x) */
+        text-align: center;
+
+        background-color: #33cccc;
+
+
+        /* Top Right Bottom Left */
+        padding: 75px 0 120px 0;
+        margin: 10px 0 -55px 0;
+        /* bottom margin=negative-> menu can be placed 'inside' the header position */
+
+        font-family: "Amatic SC", Bookman; /* Try A first: if doesn't work, use B */
+        font-size: 50px;
+        font-weight: bold;
+        color: mintcream;
+		
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover; /* resize image to cover all of the space */
+    }
+
+
+    /* ID Footer ------------------- */
+    #footer {
+        width:100%;
+        
+        font-family: Arial;
+        font-weight: normal;
+        font-size: 15px;
+        color: mintcream;
+        
+        text-align: center;
+        background-color: black;
+        
+        padding: 75px 0 100px 0;
+        margin: 10px 0 10px 0;
+
+    }
+
+
+    /* ID Menu --------------------- */
+    #menu {
+        height: 50px;
+        box-sizing: border-box;
+        white-space: nowrap;
+        overflow: hidden;
+        /* hides the content of the header if greater than the width(x)*/
+    }
+
+    #menu ul{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      position: static;
+      }
+
+    #menu li{
+        width: inherit;
+        float: right;
+        margin-top: 10px;
+        list-style-type: none;
+        display: inline-block;
+        border-left: 2px solid white;
+
+    }
+    #menu li:first-child {
+        margin-right:15px;
+    }
+
+    #menu .active {
+    /* to let users know which menu they are in */
+        background-color: rgba(0, 0, 0, 0.1);
+        color: white;
+    }
+    #menu .active::before {
+    /* to let users know which menu they are in */
+        content: "\00bb   "; /* = » */
+        white-space: pre; /* use so that the space is not removed */
+    }
+
+    #menu a{
+    /* for links*/
+        vertical-align: center;
+        text-align: center;
+        font-family: "Amatic SC", Verdana;
+        font-weight: normal;
+        font-size: 25px;
+        font-weight: bold;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.2);;
+        color: mintcream;
+    }
+
+    #menu a:hover:not(.active) {
+    /* When hovering over a non-active menu */
+      background-color: rgba(255, 255, 255, 0.35);
+      font-size: 26px;
+      color: white;
+
+    }
+    #menu a:select{
+    /* When clicked */
+      background-color: rgba(255, 255, 255, 0.45);
+      color: grey;
+    }
+
+
+
+	/* ID Content --------------------- */
+    #content{
+
+      width: 80%;
+      margin: 40px auto 40px auto;
+
+      display: block;
+      text-align: left;
+      background-color: white;
+      color: black;
+
+      font-size: 20px;
+      font-style: normal;
+      font-weight: normal;
+      font-family: Garamond, Arial;
+
+      line-height: 1.5em;
+      padding-top: 60px;
+      overflow-wrap: break-word;/* Break up the words if too big */
+	}
+

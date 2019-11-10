@@ -1,0 +1,503 @@
+/*
+	Stylesheet.css
+	This is a Stylesheet reference for a website
+	Written by: Jo Suh
+	Created in: 10/26/19
+*/
+
+/* Type selector: Selects all elements with given name */
+head {
+	@charset "utf-8";
+}
+
+body {
+	background-color: white;
+}
+
+iframe {
+	position: static;
+	width: 820px;
+	height: 420px;
+	
+	frameborder: 0;
+	
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+a {
+	/* set link name styles*/
+	font-size: 17px;
+	color: grey;
+	font-weight: normal;
+	text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+	/* hovering over links */
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+
+meter {
+	width: 70%;
+	height: 20px;
+}
+
+/* Contextual Selector */
+p emphasize {
+	font-size: 1.1em;
+	text-decoration: italics;
+	font-weight: bold;
+}
+p note {
+	font-size: 0.9em;
+	color: lightgrey;
+}
+/* Class selector: Selects all elements with given class attribute
+should be used when referencing several related elements */
+
+/* Emphasize text */
+p big {
+	white-space: pre;
+	font-family: 'Lobster', cursive;
+	font-size: 1.7em;
+	font-style: normal;
+	color: black;
+	font-weight: normal;
+	text-shadow: 0.04em 0.1em 0.05em rgba(20, 0, 0, 0.2);
+	/* x-displacement, y-displacement, spread, colour */
+}
+
+p big::after {
+	content: "\A\A";
+}
+
+/* result (table)*/
+.result { 
+	width: 300px;
+	border-collapse: collapse;
+	text-align: left;
+	font-family: Arial;
+	align: center;
+	margin: 0;
+	}
+	
+.result table, th, td {
+		/* set borders for all parts of the table */
+	border: 5px solid transparent;
+	padding: 3px;
+	vertical-align: center;
+	}
+.result td {
+	font-size: 14px;
+	color: grey;
+	font-weight: normal;
+		white-space: nowrap;
+	}
+.result td:nth-child(even){
+	font-size: 1.08em;
+	color: black;
+	font-weight: bold;
+	padding-right: 40px;
+	}
+.result td p arrayName {
+	color: black;
+	font-size: 1.2em;
+	}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Universal selector: Selects all elements */
+* {
+	/* set all margins and padding to zero */
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+/* Attribute selector: Selects all elements with given attribute */
+[title] {
+	cursor: help;
+	padding-bottom: 30px;
+	text-decoration: none;
+	cursor: default;
+}
+
+/* ID selector: Selects an element based on the value of its id attribute
+should be only one for an id in a document */
+
+/* ID Header ---------------------------------------------------------------------------------------------------------------------------- */
+#header {
+	width: 100%;
+	height: 200px;
+	position: static;
+	overflow-x: hidden;
+	/* hides contents of header if greater than width(x) */
+	
+	padding: 0;
+	padding-top: 50px;
+	margin: 10px 0 -250px 0;  /* Slightly down, (Top) 0, (Right) Height + padding top&bottom (Bottom), 0(Left) */
+	/* bottom margin=negative-> menu can be placed 'inside' the header position */
+	text-align: center;
+	vertical-align:text-top;
+	
+	font-family: 'Lobster', cursive;
+	font-weight: normal;
+	font-size: 120px;
+	color: white;
+	text-shadow: -9px 0 0 rgba(170, 80, 80, 1),
+				-20px 20px 9px rgba(0, 0, 0, 0.7);
+	/* x.offset, y.offset, blur radius, colour */
+	
+	background-color: red;
+	
+	/* Draw background: sets of circles and a gradient*/
+	background-size: 220px 220px;
+	/* radial-gradient( black 18%, transparent 22%): round patterns , pattern color, pattern size, pattern edge smoothing */
+	background-image: 	radial-gradient( rgba(0, 0, 0, 0.8) 25%, transparent 26%),
+						radial-gradient( rgba(0, 0, 0, 0.8) 25%, transparent 26%);					
+	background-position: 	0 0, 
+							110px 110px;
+							/*For each set of circles (Note how the second position is half of the background size) */
+}
+#header::before{
+	content: "Home";
+}
+
+#headermask {
+	width: 100%;
+	height: 200px;
+	position: static;
+	overflow-x: hidden;
+	/* hides contents of header if greater than width(x) */
+	padding: 0;
+	padding-top: 50px;
+	
+	
+	margin: 0 0 -60px 0;
+	/* bottom margin=negative-> menu can be placed 'inside' the header position */
+	
+	
+	background-color: transparent;
+	
+	/* Draw background: sets of circles and a gradient*/
+	background-size: 28px 28px;
+	/* radial-gradient( black 18%, transparent 22%): round patterns , pattern color, pattern size, pattern edge smoothing */
+	background-image: 	radial-gradient( rgba(0, 0, 0, 0.05) 37%, transparent 30%),
+						radial-gradient( rgba(0, 0, 0, 0.05) 37%, transparent 30%);					
+	background-position: 	0 0, 
+							14px 14px;
+							/*For each set of circles (Note how the second position is half of the background size) */
+}
+
+
+/* ID Footer ----------------------------------------------------------------------------------------------------------------------- */
+#footer {
+	width: 100%;
+	text-align: center;
+	
+	padding: 100px 0 100px 0;
+	margin: 100px 0 10px 0;
+	
+	background-color: black;
+	
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 2em;
+	color: lightgrey;
+	
+}
+
+#footer ::before {
+	/*
+	\A : nextline
+	\00a9: copyright
+	\00000a: nextline
+	*/
+	content:
+	"Student Number: 040943462\00000a 2019 \00a9  Jo Suh. ALL RIGHTS RESERVED\AStudent: Jo Suh.\00000aEmail: suh00010@algonquinlive.com";
+	white-space: pre;
+}
+
+/* ID Menu ------------------------------------------------------------------------------------------------------------------------- */
+#menu {
+	height: 50px;
+	margin: 0;
+	box-sizing: border-box;
+	white-space: nowrap;
+	overflow: hidden;
+	/* hides the content of the header if greater than the width(x)*/
+	
+	user-select: none; /* disable highlighting menu text */
+}
+
+#menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: static;
+}
+
+#menu li {
+	float: right;
+	margin: 0;
+	list-style-type: none;
+	display: inline-block;
+	border-left: 3px solid rgba(0, 0, 0, 0.1);
+}
+
+#menu .dropdown{
+	float: left;
+  overflow: hidden;
+}
+
+#menu .dropdown .dropbtn {
+  border: none;
+  outline: none;
+  padding: 15px;
+  margin: -10px;
+  border-left: 3px solid rgba(0, 0, 0, 0.1);
+vertical-align:super;
+	text-align: center;
+  font-family: 'Lobster', cursive;
+	font-weight: normal;
+	font-size: 26px;
+	color: white;
+	text-shadow: -2px 0 0 rgba(180, 0, 0, 1),
+				-10px 5px 3px rgba(0, 0, 0, 0.3);
+	/* x.offset, y.offset, blur radius, colour */
+	
+	background-color: rgba(240, 0, 0, 0.2);
+}
+
+#menu .dropdown:hover .dropbtn {
+  background-color: rgba(240, 0, 0, 0.7);
+  text-shadow: 0 0 0 rgba(180, 0, 0, 1),
+				-5px 5px 3px rgba(0, 0, 0, 1);
+}
+#menu .dropdown:hover .dropbtn:before {
+	/* to let users know which menu they are in */
+	content: "\00bb   "; /* = » */
+}
+
+#menu .dropdown-content { 
+  display: none;
+  position: absolute;
+  min-width: inherit;
+  box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.2);
+}
+
+#menu .dropdown-content a {
+  margin:0;
+  float: none;
+  color: black;  
+  border: none;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+	font-family: 'Lobster', cursive;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255, 240, 240, 1);
+	text-shadow: -2px 0 0 rgba(180, 0, 0, 1),
+				-8px 5px 3px rgba(0, 0, 0, 0.3);
+	
+	background-color: red;
+}
+
+#menu .dropdown-content a:hover {
+	color: white;
+	background-color: rgba(220, 0, 0, 1);
+	text-shadow: 0 0 0 rgba(180, 0, 0, 1),
+				-5px 5px 2px rgba(0, 0, 0, 1);
+	cursor: pointer ; /* Change to a pointer so it looks more natural */
+}
+
+#menu .dropdown:hover .dropdown-content {
+  display: block;
+  
+}
+
+
+
+#menu li:first-child {
+	margin-right: 50px;
+}
+
+
+#menu li a {
+	/* for links*/
+vertical-align:text-top;
+	text-align: center;
+	padding: 12px;
+	
+	font-family: 'Lobster', cursive;
+	font-weight: normal;
+	font-size: 26px;
+	color: rgba(255, 240, 240, 1);
+	text-shadow: -2px 0 0 rgba(180, 0, 0, 1),
+				-10px 5px 3px rgba(0, 0, 0, 0.3);
+	/* x.offset, y.offset, blur radius, colour */
+	
+	background-color: rgba(240, 0, 0, 0.2);
+}
+
+
+#menu li a.current {
+	/* to let users know which menu they are in */
+	color: white;
+	background-color: rgba(255, 30, 30, 0.8);
+	text-shadow: -3px 0 0 rgba(185, 0, 0, 1),
+				-9px 5px 3px rgba(30, 0, 70, 0.7);
+	pointer-events: none; /* Disable current page selection */
+}
+
+#menu li a.current::before {
+	/* to let users know which menu they are in */
+	content: "\00bb   "; /* = » */
+	font-weight: bold;
+	white-space: pre; /* use so that the space is not removed */
+}
+#menu li a:hover:not(.current ) {
+	/* When hovering over a non-active menu */
+	color: white
+	background-color: rgba(0, 0, 0, 0.1);
+	text-shadow: 0 0 0 rgba(180, 0, 0, 1),
+				-5px 5px 3px rgba(0, 0, 0, 1);
+	cursor: pointer ; /* Change to a pointer so it looks more natural */
+}
+
+#menu li a:active:not(.current ){
+	/* When clicked */
+	background-color: rgba(200, 0, 0, 1);
+	font-weight: bold;
+	color: rgba(0, 0, 0, 1);
+	cursor: wait ; /* Change to a loading circle until get to new page */
+}
+
+
+/* ID Content ------------------------------------------------------------------------------------------------------------------------- */
+#content {
+	width: 80%;
+	margin: 0px auto 0 auto;
+	padding-top: 60px;
+	line-height: 1.5em;
+	
+	display: block;
+	text-align: left;
+	
+	color: black;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: normal;
+	font-family: 'Lato', sans-serif;
+	
+	white-space: pre;
+	overflow-wrap: break-word; /* Break up the words if too big */
+}
+
+
+/* Input fields ------------------------------------------------------------------------------------------------------------------------- */
+.inputField {
+	width: 60%;
+	
+	display: inline-block; /* block to create the background surrounding */
+	margin-left: auto;
+	margin-right: auto;
+	padding: 70px;
+	
+	background-color: rgba(10, 10, 10, 0.1);
+	border-radius: 7px;
+
+	user-select: all; /* Need to allow selecting button label */
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	
+	font-weight: normal;
+	font-family: 'Lato', sans-serif;
+	color: black;
+}
+.inputField table{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px; /* space after the fields, before the button */
+}
+.inputField tr, td{
+	height: 50px;
+	padding: 0 20px;
+	align: center;
+}
+.inputField p{
+	text-align: left;
+	margin: 40px;
+	font-size: 15px;
+}
+.inputField p:last-child {
+	/* Add space to after the paragraph */
+	margin-bottom: 60px;
+}
+
+/* Number input fields */
+.inputField input[type=number], select {
+	text-align: center;
+	font-size: 17px;
+	align: center;
+	padding: 11px 0px; /* Test box sizes */
+	border: 3px solid transparent;
+	border-radius: 5px; /* Round off the edges */
+}
+.inputField td select .operations{
+	font-weight: bold;
+	width: 60px;
+}
+
+.inputField input[type=number]:focus {
+	background-color: rgba(100, 100, 100, 0.1);
+	border: 3px solid rgba(150, 200, 100, 1);
+}
+
+/* Number input button */
+.inputField input[type=submit] {
+	display: block;
+	box-sizing:border-box; /* include margins in width */
+	width: 90%;
+	margin: 0 60px 30px 60px;
+	padding: 10px;
+	
+	border: none;
+	border-radius: 5px; /* Round off edges */
+	
+	cursor: pointer ; /* Change to a pointer so it looks more natural */
+	
+	background-color: rgba(150, 200, 100, 1);
+	font-size: 20px;
+	color: white;
+	font-weight: bold;
+	box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.3);
+	font-wight: bold;
+	user-select: none; /* Do not allow selecting button label */
+}
+
+::placeholder {
+	color: grey;
+}
+.inputField input[type=submit]:hover {
+	background-color: rgba(170, 200, 100, 1);
+	box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
+}
+.inputField input[type=submit]:active {
+	background-color: rgba(100, 160, 70, 1);
+	box-shadow: 4px 4px 4px black;
+}
+

@@ -1,0 +1,490 @@
+
+
+<!--
+    index.html
+    This is an HTML code for formatted site
+    Written on: 09/22/2019
+    Written by: Jo Suh
+-->
+
+
+
+<!DOCTYPE html>
+<!--
+Document Type Definition:
+    what type of document it is about to process
+    Only state 'html', not the specific version
+-->
+
+
+<html>
+<!--
+HTML5 doesn't require 'html', 'head', and 'body', but they are in XHTML
+html:
+    The root element that contains all the other HTML elements in the document; divided into 2 sections: head and body.
+-->
+
+<head lang="en">
+	<!-- head: contains descriptive elements about the document -->
+	<meta charset="utf-8">
+	<!-- this declares that the character encoding for the document is 'UTF-8' -->
+	
+	<title>Home</title>
+	<!-- title: what displays as the 'tab name' -->
+	
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
+	<link rel="stylesheet" href="css/main.css">
+    
+    
+    <!-- reference font -->
+    <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+ 
+    
+    
+    
+	<!-- specifies and external CSS style sheet file used with this document -->
+	
+	<script src="js/html5shiv.js"></script>
+	<!-- references an external Javascript file -->
+
+<style>
+
+
+/* Class selectors should be used when referencing several related elements */
+
+    .iframeSet {
+
+        width: 240px;
+        object-fit: contain;
+        frameborder: 0;
+        fullscreen: allow;
+        scrolling="no";
+        frameborder="no";
+        allow="autoplay"'
+
+    }
+
+    /* Class emphasize */
+    .emphasize {
+        font-size: 1.1em;
+        font-style: italic;
+        color: black;
+        font-weight: bold;
+        pointer-events: none;
+
+    }
+
+
+
+
+/* collage table*/
+    .collage { 
+
+      border-collapse: collapse;
+      text-align: center;
+      align: center;
+      margin: auto;
+    }
+    
+    /* Table outer borders, heading lines, table elements */
+    .collage table, th, td {
+    	/* This sets borders for entire parts of the table */
+        border: 5px solid white;
+    }
+    /* Add the bottom border again */
+    .collage {
+    	border-bottom: double 10px #33cccc;
+    }
+        
+    /* Table heading */
+    .collage th {
+        height: 55px;
+        background-color: #33cccc;
+        color: white;
+        font-weight: bold;
+        font-family: Verdana;
+    }
+    
+    /* Table body, the elements */
+    .collage img{
+        padding: 3px;/* Set space between the text and the borders */
+        width: 150px;
+        height: 150px;
+        object-fit: cover; /* or contain if want to keep proportions */
+	}
+
+
+/* 
+id attribute
+can only be assigned to a single HTML element
+*/
+
+/* set all margins and padding to zero */
+  *{
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+
+  .hyperlink a{
+  /* for all links*/
+      color: darkcyan;
+      font-weight: normal;
+      text-decoration: none; /* Remove underline */
+      display: inline;
+  }
+  
+  .hyperlink p::before{
+  /* for all links*/
+     content: ' \2192  ';
+  }
+
+  .hyperlink a:hover{
+  /* for links in content */
+      font-weight: bold;
+      font-size: 1.1em;
+  }
+
+  /* ID Header ------------------------------------------------------- */
+  #header {
+      width: 100%;
+
+      position: static; 
+
+      background-color: #33cccc;
+
+      overflow-x: hidden; /* hides contents of header if greater than width(x) */
+
+      /* Different padding values */
+      padding: 50px 0 120px 0;
+      margin: 10px 0 -55px 0;
+
+      font-family: "Amatic SC", Bookman;
+      font-size: 50px;
+      font-weight: bold;
+      text-align: center;
+      color: mintcream;
+  }
+
+
+  /* ID Footer ------------------------------------------------------- */
+  #footer {
+      width:100%;
+      font-family: Arial;
+      font-weight: normal;
+      background-color: black;
+      text-align: center;
+      color: mintcream;
+      font-size: 15px;
+      /* Different padding values */
+      padding: 50px 30px 100px 30px;
+      margin: 10px 0 10px 0;
+
+  }
+
+
+  /* ID Menu ------------------------------------------------------- */
+  #menu {
+      height: 50px;
+      box-sizing: border-box;
+      white-space: nowrap;
+      overflow: hidden; /* hides the content of the header if greater than the width(x)*/
+  }
+
+
+  /* Menu details ---------------- */	
+
+
+  #menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: static; 
+    background-color: #33cccc;
+    }
+
+  #menu li{
+      width: inherit;
+      float: right;
+      margin-top: 10px;
+      list-style-type: none;
+      display: inline-block;
+      border-left: 2px solid white;
+
+  }
+  #menu li:first-child {
+      margin-right:15px;
+  }
+
+  #menu .active {
+  /* to let users know which menu they are in */
+      background-color: rgba(0, 0, 0, 0.1);
+      color: white;
+  }
+  #menu .active::before {
+  /* to let users know which menu they are in */
+      content: "\00bb   "; /* = » */
+      white-space: pre; /* use so that the space is not removed */
+  }
+
+  #menu a{
+  /* for links*/
+      vertical-align: center;
+      text-align: center;
+      font-family: "Amatic SC", Verdana;
+      font-weight: normal;
+      font-size: 25px;
+      font-weight: bold;
+      padding: 20px;
+      background-color: #33cccc;
+      color: mintcream;
+  }
+
+  #menu a:hover:not(.active) {
+  /* When hovering over a non-active menu */
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 27px;
+    color: white;
+
+  }
+  #menu a:active:select{
+  /* When clicked */
+    background-color: rgba(255, 255, 255, 0.25);
+  	color: grey;
+  }
+
+  /* Attribute Selector */
+  [title] {
+    cursor: help;
+    padding-bottom: 30px;
+    text-decoration: none;
+  }
+
+
+
+  /* ID Content ------------------------------------------------------- */
+  #content{
+
+      width: 80%;
+      margin: 40px auto 40px auto;
+
+      display: block;
+      text-align: left;
+      background-color: white;
+      color: black;
+
+      font-size: 20px;
+      font-style: normal;
+      font-weight: normal;
+      font-family: Garamond, Arial;
+
+      line-height: 1.5em;
+      padding-top: 60px;
+      overflow-wrap: break-word;/* Break up the words if too big */
+  }
+
+
+
+</style>
+	
+</head>
+
+
+
+
+
+
+<body>
+<!-- body: contains content that will be displayed by the browser -->
+
+    <div id="header">
+    	<p >Jo Suh</p>
+    
+    </div>
+    
+    
+    <div id="menu">
+    	<ul>
+          <li><a href="#home" class="active" title="adsada">Home</a></li>
+          <li><a href="#news" title="kjhgfd">News</a></li>
+          <li><a href="#contact" title="qwerty">Contact</a></li>
+  		</ul>
+    </div>
+    
+    
+    
+    <div id="content">
+    	<p >hello yall</p>
+        <br>
+        <p>
+        Lorem ipsum dolor sit amet, ubique invenire an nec, ex tamquam propriae vix. Ea cum elit disputationi, an consul soluta repudiandae eos, illud iuvaret per ne. Dicant admodum ea est, an eam aperiam corpora nominavi, unum timeam vivendum eu mel. In nec saperet habemus deserunt, dolores hendrerit ne sea, labitur aliquando cum te.
+        
+Melius scripta assentior in ius, pro saepe habemus et. Ex facilisi definitionem duo. Qui ne sanctus laoreet voluptua, cu eius vidisse sed. Quem possit pro cu, quas solum pro ea. Eum mazim sonet errem ad, sed idque quidam conclusionemque et.
+
+Ad pri audire convenire interpretaris. Mea intellegebat voluptatibus reprehendunt ut. Per at probo solet deterruisset, has inermis facilis ei, mea ea amet everti. Id atomorum intellegam vel, nec no esse reformidans. Vis ipsum choro ne. Vis te melius scripta molestiae, eligendi efficiantur ea per.
+
+Pro ad homero invidunt intellegebat, legendos patrioque sea ad. Veri imperdiet vix ea, est probatus petentium at. Ex doctus facilisi suavitate vis, eam ne tollit persecuti. Id mandamus molestiae democritum cum.
+
+
+Vidit mediocrem cotidieque ne has. Nec an reque dicunt. Ea ludus fastidii deleniti per, nibh idque consequuntur at nam, nobis decore nostrud et cum. Per no urbanitas disputationi, at pro posse detraxit, hinc impedit efficiendi his id. Cum ea deleniti sensibus convenire, sed nemore delectus ad.
+        </p>
+        <br>
+        <br>
+        <p>
+Usu iudicabit intellegam ut. Eam cu iisque euismod, ferri delenit et eos. Harum scribentur necessitatibus vim in. Omnium denique ex eos, ut ornatus molestie placerat vim. Hinc disputando ut quo, has cu dicat meliore, per an eleifend mediocritatem. Ex tritani feugait vis, ei ius laboramus maiestatis constituto, no movet feugait mei.
+
+Eum ea menandri definiebas intellegebat, nam ne nostrum vituperatoribus, et has persius admodum eligendi. Cum ne nullam praesent, ad quaerendum contentiones vim. Brute choro sit ne, cum id quis audiam periculis, modus justo vivendo usu ut. Hinc congue legimus usu in. In ceteros expetenda cum, laudem explicari ex pro.
+
+Mel molestie copiosae assueverit ad. Aeque homero alterum his in. Ex insolens aliquando neglegentur vel, dicant diceret deseruisse his no. Sit at omnis primis, per esse dolorum at. Vel eu nostrum persecuti theophrastus. Et vix quem corrumpit, pri cu bonorum impedit.
+
+Vix ne feugait perpetua, ex erat magna vim. Vix alia atomorum instructior id, quot nominati ex mea. Eum vitae nullam diceret ex. Mea ei lorem abhorreant vituperatoribus, alia sonet scripta no nam. Cu dicunt consequuntur mel.
+
+Ei eos maiorum platonem. Est in odio apeirian. Mei liber possim postulant eu. Agam everti mel te. Eum et esse qualisque.
+</p>
+        <br>
+        <br>
+        
+        <table class="collage">
+            <!-- Heading -->
+        	<tr>
+            	<th colspan="3">9 Aesthetic images</th>
+            </tr>
+            
+            <!-- Row 1 -->
+            <tr>
+            	<td>
+                	<img src=
+                    "https://66.media.tumblr.com/8a96a8915258090548d1c2391830b7ee/tumblr_oqi2fsARuB1t0vqjwo1_400.jpg"
+                    title="Aesthetics">
+                </td>
+            	<td>
+                	<img src=
+                    "http://s13.favim.com/orig/160215/cold-colors-cute-existence-Favim.com-4002048.jpg"
+                    title="iceu">
+                </td>
+            	<td>
+                	<img src=
+                    "https://scontent-yyz1-1.cdninstagram.com/vp/644365ed7dbabf1b8dc3bd8af5a51f27/5DFAC560/t51.2885-15/e35/40642239_2026286487435769_6435309860790730752_n.jpg?_nc_ht=scontent-yyz1-1.cdninstagram.com&_nc_cat=101"
+                    title="Night sky">
+                </td>
+            </tr>
+            <!-- Row 2 -->
+        	<tr>
+            	<td>
+                	<img src=
+                    "https://scontent-lhr3-1.cdninstagram.com/v/t51.2885-15/e35/39547165_1365040783630764_9151088115220217856_n.jpg?_nc_ht=scontent-lhr3-1.cdninstagram.com&se=8&oh=7388500e8c5cebec2ab390901a2665f6&oe=5E01CE31&ig_cache_key=MTg1MzE4ODIyNjI0MDY2MDQ0Ng%3D%3D.2"
+                    title="Clouds">
+                </td>
+            	<td>
+                	<img src=
+                    "https://p16.muscdn.com/img/musically-maliva-obj/1640499516812293~c5_720x720.jpeg"
+                    title="Rose">
+            	<td>
+                	<img src=
+                    "https://vignette.wikia.nocookie.net/animal-jam-clans-1/images/b/bc/Aesthetic-alternative-background-beautiful-Favim.com-3992435_%281%29.jpg/revision/latest?cb=20181028214919"
+                    title="Forest">
+                </td>
+            </tr>
+            <!-- Row 3 -->
+        	<tr>
+            	<td>
+                	<img src=
+                    "https://data.whicdn.com/images/319115099/large.jpg"
+                    title="Shore">
+                </td>
+            	<td>
+                	<img src=
+                    "http://41.media.tumblr.com/f4e8e3c2b7b0d5234203730862d862f6/tumblr_nkk6r6czZH1tpf4xeo1_500.png"
+                    title="Fabric">
+                </td>
+            	<td>
+                	<img src=
+                    "http://s13.favim.com/orig/160323/aesthetic-candy-cute-like-Favim.com-4108858.jpg"
+                    title="Shop">
+                </td>
+            </tr>
+        </table>
+      
+      
+
+
+
+
+
+
+        <br>
+        <br>
+        <p>Embedded audio file</p>
+        <br>
+        
+        <iframe class= iframeSet
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/113011776&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+        </iframe>
+        
+        
+        <br>
+        <br>
+        <br>
+        <p>Hyperlink to an audio file</p>
+        <div class="hyperlink">
+        	<a href="https://soundcloud.com/stormyosts2/howls-moving-castle-ost-flower">
+              <p>Flower</p>
+          <a>
+        </div>
+        
+        
+        <br>
+        <br>
+        
+        
+        <p>Embedded video file</p>
+        <br>
+        <!-- 
+        src=
+        "
+        https://www.youtube.com/embed/
+        YoutubeFileName?
+        autoplay=booleanNum
+        &mute=booleanNum
+        &controls=0
+        &loop=1
+        "-->
+        <iframe class= iframeSet
+			src="https://www.youtube.com/embed/ImPM5IDIYPs?
+            controls=0">
+		</iframe>
+        
+        <br>
+        
+        <p>Hyperlink to an video file</p>
+        <div class="hyperlink" >
+          <a href="https://www.youtube.com/watch?v=ImPM5IDIYPs">
+              <p>Name of Life</p>
+          <a>
+        </div>
+
+
+        <br>
+        <br>
+        <br>
+        
+        <p class="emphasize">This is an important text</p>
+        
+    </div>
+    
+    
+    
+    
+    <div id="footer">
+    	
+    	<p>	&copy;2019 Jo Suh. ALL RIGHTS RESERVED.<p>
+    </div>
+    
+
+
+
+</body>
+
+</html>
+

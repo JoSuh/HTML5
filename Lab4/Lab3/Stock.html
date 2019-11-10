@@ -1,0 +1,249 @@
+﻿
+<!--
+	Stock.html
+    This is a html code for a table example
+    Written on: 09/18/2019
+	Written by: Jo Suh
+-->
+
+
+<!-- Document Type Definition : what type of document it is about to process-->
+<!-- Only state 'html', not the specific version -->
+<!DOCTYPE html>
+
+
+<!-- HTML5 doesn't require 'html', 'head', and 'body', but they are in XHTML-->
+<!-- html : The root element that contains all the other HTML elements in the document.
+divided into 2 sections: head and body.
+-->
+<html>
+
+
+<head lang="en">
+	<!-- head: contains descriptive elements about the document -->
+	<meta charset="utf-8">
+	<!-- this declares that the character encoding for the document is 'UTF-8' -->
+	
+	<title>Stocks</title>
+	<!-- title: what displays as the 'tab name' -->
+	
+	<link rel="stylesheet" href="css/main.css">
+	<!-- specifies and external CSS style sheet file that is used with this document -->
+	
+	<script src="js/html5shiv.js"></script>
+	<!-- references an external Javascript file -->
+
+        
+    <!-- 
+    	The following is the 'CSS' code;
+    	A 'template' of rules for the elements in the webpage
+    -->    
+	<style>
+    
+    /* Tables */
+	table { 
+        width: 50%; /* table's width is 50% of the webpage */
+        
+        
+        font-family: Helvetica; /* Used fonts */
+        
+        border-collapse: collapse;
+        /* border-collapse:
+            collapses the borders into a single border line
+            separate or collapse*/
+        
+        text-align: center;
+        /* align every element in the array */
+        
+        
+        /* This is to ensure that the table is placed at the center of the page */
+        margin-left:auto; 
+        margin-right:auto; 
+    }
+    
+    /* Table outer borders, heading lines, table elements */
+    table, th, td {
+    	/* This sets borders for entire parts of the table */
+        border: 1px solid black;
+    }
+    
+    /* Table heading */
+    th {
+        height: 55px;
+        background-color: grey;
+        color: white;
+    }
+    
+    /* Table body, the elements */
+    tbody td {
+        height= 10px;
+        padding: 0.3em;/* Set space between the text and the borders */
+	}
+	/* Nth-child: strips */
+	tbody tr:nth-child(even)
+    {
+        background: #efefef; /* Set every even-number-th row to this color */
+    }
+    
+    
+    /* p: text */
+    p{
+    	font-family: Times new roman;
+      	color:yellowgreen;
+      	display: inline; /* To remove the '\n' after the links we are going to put*/
+    }
+    
+    /* mouse hovering over 'p' */
+    p:hover{
+    	color: limegreen; /* changes color when hovering over */
+  		text-decoration: underline;
+      	font-weight: bold;
+    }
+    
+    /* a: links */
+    a{
+  		text-decoration: none;/* Remove underline */
+    }
+    
+    /* visited link */
+    a:visited{
+    	color: lightgrey;
+    }
+    
+    </style>
+	
+	
+</head>
+
+
+
+
+
+
+
+<!-- body: contins content that will be displayed by the browser -->
+<body>
+    
+    
+    <br>
+    
+    
+    <h1 style="font-family:verdana;
+    		text-align:center;
+            color:#87CEEC">
+        Stock
+    </h1>
+    
+    
+    
+    
+    <!-- links to other pages -->
+    
+	<!-- href Attribute : indicates the file name or UR -->
+	<!-- <a href="index.html">address</a> -->
+	
+    
+    <nav style="text-align: center">
+    	<a href="http://suh00010.com/CST8238/Lab3/index.html">
+          <p>Home</p>
+      	</a>
+        
+        &nbsp; &nbsp; &nbsp;
+        
+    	<a href="http://suh00010.com/CST8238/Lab3/Schedule.html">
+          <p>Schedule</p>
+      	</a>
+        
+        &nbsp; &nbsp; &nbsp;
+        
+    	<a href="http://suh00010.com/CST8238/Lab3/Calendar.html">
+          <p>Calendar</p>
+      	</a>
+    </nav>
+    
+    
+	<br>
+    <br>
+    <br>
+    <br>
+    
+    
+    
+    <!-- Create a HTML table element -->
+    <table>
+        
+        <!-- The table head -->
+        <thead>
+            <tr>
+                <th colspan="5">This Week's Stocks</th>
+            </tr>
+        </thead>
+        
+        <!-- The table body -->
+        <tbody>
+            
+            <tr style="font-weight:bold">
+            <!-- Row 1 -->
+                <td>Name</td>
+                <td>Symbol</td>
+                <td>Last price</td>
+                <td>52wk High</td>
+                <td>52wk Low</td>
+            </tr>
+            <tr>
+            <!-- Row 2 -->
+                <td>Shopify Inc</td>
+                <td>SHOP</td>
+                <td>432.80 CAD</td>
+                <td>543.76</td>
+                <td>159.25</td>
+            </tr>
+            <tr>
+            <!-- Row 3 -->
+                <td>Apple Inc.</td>
+                <td>AAPL</td>
+                <td>222.77 USD</td>
+                <td>233.47</td>
+                <td>142.00</td>
+            </tr>
+            <tr>
+            <!-- Row 4 -->
+                <td>Samsung Electronics Co Ltd</td>
+                <td>005930</td>
+                <td>47,700 KRW</td>
+                <td>47,700</td>
+                <td>36,850</td>
+            </tr>
+            <tr>
+            <!-- Row 5 -->
+                <td>Uber Technologies Inc</td>
+                <td>UBER</td>
+                <td>34.26 USD</td>
+                <td>47.08</td>
+                <td>30.66</td>
+            </tr>
+            <tr>
+            <!-- Row 6 -->
+                <td>LYFT Inc</td>
+                <td>LYFT</td>
+                <td>46.62  USD</td>
+                <td>88.60</td>
+                <td>43.41</td>
+            </tr>
+            
+            
+        </tbody>
+        
+        
+        
+        
+    </table>
+    
+    <br>
+    <br>
+    <br>
+    
+</body>
+
+</html>
+

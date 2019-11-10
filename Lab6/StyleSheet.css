@@ -1,0 +1,324 @@
+/*
+	Stylesheet.css
+	This is a Stylesheet reference for a website
+	Written by: Jo Suh
+	Created in: 10/02/19
+*/
+
+/* Type selector: Selects all elements with given name */
+body {
+	background-color: white;
+}
+
+iframe {
+	width: 500px;
+	height: 260px;
+	object-fit: contain;
+	frameborder: 0;
+	fullscreen: allow;
+}
+
+a {
+	/* set link name styles*/
+	font-size: 17px;
+	color: grey;
+	font-weight: normal;
+	text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+	/* hovering over links */
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+
+meter {
+  width: 70%;
+  height: 20px;
+}
+
+/* Contextual Selector */
+p emphasize {
+	font-size: 1.1em;
+	text-decoration: italics;
+	font-weight: bold;
+}
+p note {
+	font-size: 0.9em;
+	color: lightgrey;
+}
+/* Class selector: Selects all elements with given class attribute
+should be used when referencing several related elements */
+
+/* Emphasize text */
+.title {
+	white-space: pre;
+	font-family: 'Lobster', cursive;
+	font-size: 1.7em;
+	font-style: normal;
+	color: black;
+	font-weight: normal;
+	text-shadow: 0.04em 0.1em 0.05em rgba(20, 0, 0, 0.2);
+	/* x-displacement, y-displacement, spread, colour */
+}
+
+.title::before {
+	content: "\A\A";
+}
+
+.title::after {
+	content: "\A\A";
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Universal selector: Selects all elements */
+* {
+	/* set all margins and padding to zero */
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+/* Attribute selector: Selects all elements with given attribute */
+[title] {
+	cursor: help;
+	padding-bottom: 30px;
+	text-decoration: none;
+}
+
+/* ID selector: Selects an element based on the value of its id attribute
+should be only one for an id in a document */
+
+/* ID Header -------------------------------------------------- */
+#header {
+	width: 100%;
+	position: static;
+	overflow-x: hidden;
+	/* hides contents of header if greater than width(x) */
+	
+	/* Top Right Bottom Left */
+	padding: 75px 0 120px 0;
+	margin: 10px 0 -60px 0;
+	/* bottom margin=negative-> menu can be placed 'inside' the header position */
+	text-align: center;
+	
+	
+	font-family: 'Lobster', cursive;
+	font-weight: normal;
+	font-size: 65px;
+	color: white;
+	text-shadow: -6px 0 0 rgba(170, 80, 80, 1), -20px 15px 5px rgba(0, 0, 0, 0.7);
+	/* x.offset, y.offset, blur radius, colour */
+	
+	
+	background-color: red;
+	background-image: radial-gradient(black 18%, transparent 22%),
+						radial-gradient(black 18%, transparent 22%); /* Draw sets of circles */
+	background-size: 80px 80px;
+	background-position: 0 0, 40px 40px; /*For each set of circles */
+	
+}
+
+#header ::before {
+	content: "CST8238-351 Web Programming";
+}
+
+/* ID Footer --------------------------------------------- */
+#footer {
+	width: 100%;
+	font-family: Staatliches, Arial;
+	font-weight: normal;
+	font-size: 15px;
+	color: mintcream;
+	text-align: center;
+	
+	padding: 75px 0 100px 0;
+	margin: 100px 0 10px 0;
+	
+	background-color: black;
+	
+}
+
+#footer ::before {
+	content:
+		"Student Number: 040943462\A\00a9  Jo Suh. ALL RIGHTS RESERVED\AStudent: Jo Suh.\00000aEmail: suh00010@algonquinlive.com";
+	white-space: pre;
+}
+
+/* ID Menu ----------------------------------------------- */
+#menu {
+	height: 50px;
+	box-sizing: border-box;
+	white-space: nowrap;
+	overflow: hidden;
+	/* hides the content of the header if greater than the width(x)*/
+	
+	user-select: none; /* disable highlighting menu text */
+}
+
+#menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: static;
+}
+
+#menu li {
+	float: right;
+	margin-top: 5px;
+	list-style-type: none;
+	display: inline-block;
+	border-left: 4px solid white;
+}
+
+#menu li:first-child {
+	margin-right: 15px;
+}
+
+
+#menu a {
+	/* for links*/
+	vertical-align: center;
+	text-align: center;
+	padding: 10px;
+	
+	font-family: 'Lobster', cursive;
+	font-weight: normal;
+	font-size: 26px;
+	color: white;
+	text-shadow: -2px 0 0 rgba(180, 0, 0, 1), -10px 5px 3px rgba(0, 0, 0, 0.6);
+	/* x.offset, y.offset, blur radius, colour */
+	
+	background-color: rbg(255, 0, 0, 1);
+	border-radius: 5px; /* Round off the edges */
+}
+
+
+#menu a.current {
+	/* to let users know which menu they are in */
+	background-color: rgba(255, 60, 60, 1);
+	text-shadow: -3px 0 0 rgba(185, 0, 0, 1), -9px 5px 3px rgba(30, 0, 70, 0.7);
+	pointer-events: none; /* Disable current page selection */
+}
+
+#menu a.current::before {
+	/* to let users know which menu they are in */
+	content: "\00bb   "; /* = » */
+	font-weight: bold;
+	white-space: pre; /* use so that the space is not removed */
+}
+#menu a:hover:not(.current ) {
+	/* When hovering over a non-active menu */
+	background-color: rgba(255, 100, 100, 0.8);
+	text-shadow: 0 0 0 rgba(180, 0, 0, 1), -5px 5px 3px rgba(0, 0, 0, 1);
+}
+
+#menu a:active:not(.current ){
+	/* When clicked */
+	background-color: rgba(230, 0, 0, 0.5);
+	font-weight: bold;
+	color: rgba(255, 20, 20, 1);
+}
+
+/* ID Content ----------------------------------------------- */
+#content {
+	width: 80%;
+	margin: 0px auto 40px auto;
+	padding-top: 60px;
+	line-height: 1.5em;
+	
+	display: block;
+	text-align: left;
+	
+	color: black;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: normal;
+	font-family: Arial;
+	
+	white-space: pre;
+	overflow-wrap: break-word; /* Break up the words if too big */
+}
+
+
+/* Input fields ----------------------------------------------- */
+.inputField {
+	width: 70%;
+	
+	display: inline-block; /* block to create the background surrounding */
+	margin-left: auto;
+  	margin-right: auto;
+  	
+  	background-color: rgba(10, 10, 10, 0.1);
+	border-radius: 5px;
+
+  	user-select: all; /* Need to allow selecting button label */
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	
+	font-family: Arial;
+  	color: black;
+}
+
+.inputField label {
+	text-align: left;
+  	margin: 50px; /* Area around the label */
+  	font-size: 16px;
+}
+.inputField p{
+	text-align: left;
+  	margin: 20px 10px 0 50px;
+  	font-size: 12px;
+}
+
+/* Number input fields */
+.inputField input[type=number], select {
+	width: 120px;
+	text-align: left;
+	  
+	padding: 12px 10px; /* The Text field */
+
+	border: 1px solid rgba(10, 10, 10, 0.5);
+	border-radius: 5px; /* Round off the edges */
+}
+.inputField input[type=number]:focus {
+  background-color: rgba(90, 90, 90, 0.1);
+}
+
+/* Number input button */
+.inputField input[type=submit] {
+	display: block;
+  box-sizing:border-box; /* include margins in width */
+  width: 90%;
+  margin: 0 60px 30px 60px;
+  padding: 10px;
+  
+  border: none;
+  border-radius: 5px; /* Round off edges */
+  
+  cursor: pointer ; /* Change to a pointer so it looks more natural */
+  
+  background-color: rgba(150, 200, 100, 1);
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.3);
+  font-wight: bold;
+  user-select: none; /* Do not allow selecting button label */
+}
+
+.inputField input[type=submit]:hover {
+  background-color: rgba(140, 200, 90, 1);
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
+}
+.inputField input[type=submit]:selected {
+  background-color: rgba(200, 200, 90, 1);
+  box-shadow: 4px 4px 4px black;
+}
